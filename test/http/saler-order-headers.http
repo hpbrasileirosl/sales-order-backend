@@ -9,13 +9,16 @@ Content-Type: application/json
 POST http://{{localhost}}/SalesOrderHeaders
 Content-Type: application/json
 
-{
-    "ID": "1234"
-}
-
 ###
 
 DELETE http://{{localhost}}/SalesOrderHeaders(ID=23fd699f-b8cd-4de9-80fb-bc9d73eeb3ba)
 Content-Type: application/json
 
 ###
+
+PUT http://{{localhost}}/SalesOrderHeaders(ID=c95502a8-fd02-43a4-8813-c09bcaca4106)
+Content-Type: application/json
+
+{
+    "modifiedBy": "hernando"
+}
