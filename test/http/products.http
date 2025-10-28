@@ -1,0 +1,51 @@
+
+@localhost=localhost:4004/odata/v4/main
+
+GET http://{{localhost}}/Products
+Content-Type: application/json
+
+###
+
+GET http://{{localhost}}/Products(id=ee0d6490-773d-4524-bbe9-db89b616e24f)
+Content-Type: application/json
+
+###
+
+GET http://{{localhost}}/Products?$filter=startswith(name,'Lord')
+Content-Type: application/json
+
+###
+
+POST http://{{localhost}}/Products
+Content-Type: application/json
+
+{
+    "id": "baac508f-093d-49a5-9633-3f987365b6fe",
+    "name": "Lords Of Waterdeep",
+    "price": 585.00
+}
+
+###
+
+POST http://{{localhost}}/Products
+Content-Type: application/json
+
+{
+    "id": "ba1b6ad9-8c55-44f6-b690-5eda6e6e33fe",
+    "name": "My Little Scythe",
+    "price": 182.00
+}
+
+###
+
+DELETE http://{{localhost}}/Products(id=ee0d6490-773d-4524-bbe9-db89b616e24f)
+Content-Type: application/json
+
+###
+
+PATCH http://{{localhost}}/Products(id=ee0d6490-773d-4524-bbe9-db89b616e24f)
+Content-Type: application/json
+
+{
+    "price": "565"
+}

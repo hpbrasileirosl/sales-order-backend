@@ -1,0 +1,19 @@
+@localhost=localhost:4004/odata/v4/main
+
+GET http://{{localhost}}/SalesOrderItems
+Content-Type: application/json
+
+###
+
+POST http://{{localhost}}/SalesOrderItems
+Content-Type: application/json
+
+{
+    "id": "b41bb0f4-4d77-4730-8ad2-7d74f9923251",
+    "header_id": "c4f8d583-2e62-4ee6-9296-c4341de0067a",
+    "product_id": "3793e61e-c69f-4ae5-b963-e00d5db6707f",
+    "quantity": 1,
+    "price": 180.20            
+}
+
+###

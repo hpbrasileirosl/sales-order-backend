@@ -3,7 +3,7 @@
     "requires": {
       "db": {
         "credentials": {
-          "database": ":memory:"
+          "url": ":memory:"
         },
         "kind": "sqlite"
       }

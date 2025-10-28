@@ -1,7 +1,12 @@
 
 @localhost=localhost:4004/odata/v4/main
 
-GET http://{{localhost}}/SalesOrderHeaders
+GET http://{{localhost}}/SalesOrderHeaders?$expand=items,customer
+Content-Type: application/json
+
+###
+
+GET http://{{localhost}}/SalesOrderHeaders(id=14070001-7aa7-4ad2-b9a6-85e1fb7e3916)?$expand=items
 Content-Type: application/json
 
 ###
@@ -9,16 +14,46 @@ Content-Type: application/json
 POST http://{{localhost}}/SalesOrderHeaders
 Content-Type: application/json
 
+{
+    "id": "c4f8d583-2e62-4ee6-9296-c4341de0067a",
+    "customer_id": "03354879-c843-4673-b3ac-1160756746d4",
+    "totalAmount": 732.3,
+    "items": [
+        {
+            "id": "d49dd4d9-fcce-4b9e-af9b-67ce13ed71a6",
+            "header_id": "c4f8d583-2e62-4ee6-9296-c4341de0067a",
+            "product_id": "ba1b6ad9-8c55-44f6-b690-5eda6e6e33fe",
+            "quantity": 1,
+            "price": 550.10            
+        },
+        {
+            "id": "0a0ab220-8629-40f4-9fa3-863bef1bd7e5",
+            "header_id": "c4f8d583-2e62-4ee6-9296-c4341de0067a",
+            "product_id": "baac508f-093d-49a5-9633-3f987365b6fe",
+            "quantity": 1,
+            "price": 180.20            
+        }
+    ]
+}
+
 ###
 
-DELETE http://{{localhost}}/SalesOrderHeaders(ID=23fd699f-b8cd-4de9-80fb-bc9d73eeb3ba)
+DELETE http://{{localhost}}/SalesOrderHeaders(id=2dbd1de3-e2cf-4fd4-bcb1-068307d9df3X)
 Content-Type: application/json
 
 ###
 
-PUT http://{{localhost}}/SalesOrderHeaders(ID=c95502a8-fd02-43a4-8813-c09bcaca4106)
+PATCH http://{{localhost}}/SalesOrderHeaders(id=14ad5245-66f1-48de-a2f3-58ad439f9911)
 Content-Type: application/json
 
 {
-    "modifiedBy": "hernando"
+    "items": [
+        {
+            "id": "b41bb0f4-4d77-4730-8ad2-7d74f9923251",
+            "header_id": "14ad5245-66f1-48de-a2f3-58ad439f9911",
+            "product_id": "c7c5833d-7dbc-4cb3-8041-ea5759e488c1",
+            "quantity": 1,
+            "price": 180.20            
+        }
+    ]
 }

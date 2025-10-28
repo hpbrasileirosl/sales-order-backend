@@ -1,0 +1,41 @@
+
+@localhost=localhost:4004/odata/v4/main
+
+GET http://{{localhost}}/Customers
+Content-Type: application/json
+
+###
+
+GET http://{{localhost}}/Customers(id=15ee6c95-fd66-4104-b522-ac56664e2582)
+Content-Type: application/json
+
+###
+
+GET http://{{localhost}}/Customers?$filter=startswith(firstName,'Hernando')
+Content-Type: application/json
+
+###
+
+POST http://{{localhost}}/Customers
+Content-Type: application/json
+
+{
+    "id": "03354879-c843-4673-b3ac-1160756746d4",
+    "firstName": "Hernando",
+    "lastName": "Brasileiro",
+    "email": "desenvolvimento2@slpart.com.br"
+}
+
+###
+
+DELETE http://{{localhost}}/Customers(id=15ee6c95-fd66-4104-b522-ac56664e2582)
+Content-Type: application/json
+
+###
+
+PATCH http://{{localhost}}/Customers(id=15ee6c95-fd66-4104-b522-ac56664e2582)
+Content-Type: application/json
+
+{
+    "lastName": "Brasileiro"
+}

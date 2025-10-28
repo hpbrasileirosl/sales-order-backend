@@ -3,10 +3,10 @@ using { managed } from '@sap/cds/common';
 namespace sales;
 
 entity SalesOrderHeaders : managed {
-  key ID : UUID;
+  key id : UUID;
       customer: Association to Customers;
       totalAmount: Decimal(15, 2);
-      items: Composition of SalesOrderItems on items.header = $self;
+      items: Composition of many SalesOrderItems on items.header = $self;
 }
 
 entity SalesOrderItems {
