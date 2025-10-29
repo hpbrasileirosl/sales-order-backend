@@ -1,7 +1,7 @@
 
 @localhost=localhost:4004/odata/v4/main
 
-GET http://{{localhost}}/SalesOrderHeaders?$expand=items,customer
+GET http://{{localhost}}/SalesOrderHeaders?$expand=items($expand=product),customer
 Content-Type: application/json
 
 ###
@@ -17,11 +17,11 @@ Content-Type: application/json
 {
     "id": "c4f8d583-2e62-4ee6-9296-c4341de0067a",
     "customer_id": "03354879-c843-4673-b3ac-1160756746d4",
-    "totalAmount": 732.3,
+    "totalAmount": 730.3,
     "items": [
         {
             "id": "d49dd4d9-fcce-4b9e-af9b-67ce13ed71a6",
-            "header_id": "c4f8d583-2e62-4ee6-9296-c4341de0067a",
+            "header_id": "c4f8d583-2e62-4ee6-92 96-c4341de0067a",
             "product_id": "ba1b6ad9-8c55-44f6-b690-5eda6e6e33fe",
             "quantity": 1,
             "price": 550.10            
@@ -38,7 +38,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://{{localhost}}/SalesOrderHeaders(id=2dbd1de3-e2cf-4fd4-bcb1-068307d9df3X)
+DELETE http://{{localhost}}/SalesOrderHeaders(id=c4f8d583-2e62-4ee6-9296-c4341de0067a)
 Content-Type: application/json
 
 ###
@@ -57,3 +57,10 @@ Content-Type: application/json
         }
     ]
 }
+
+###
+
+GET http://{{localhost}}/SalesOrderHeaders/$count
+Content-Type: application/json
+
+###

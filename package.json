@@ -7,12 +7,17 @@
     "express": "^4"
   },
   "devDependencies": {
+    "@cap-js/cds-typer": "^0.38.0",
     "@cap-js/sqlite": "^2",
-    "git-commit-msg-linter": "^5.0.8"
+    "@types/node": "^24.9.2",
+    "git-commit-msg-linter": "^5.0.8",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
   },
   "scripts": {
     "start": "cds-serve",
-    "dev": "cds watch"
+    "dev0": "cds watch",
+    "dev": "DEBUG=db cds-tsx watch"
   },
   "private": true
 }
