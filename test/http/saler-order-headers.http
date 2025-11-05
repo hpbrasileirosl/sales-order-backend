@@ -16,21 +16,21 @@ Content-Type: application/json
 
 {
     "id": "c4f8d583-2e62-4ee6-9296-c4341de0067a",
-    "customer_id": "03354879-c843-4673-b3ac-1160756746d4",
+    "customer_id": "30017255-5d72-4987-9734-bfc805ed45bb",
     "totalAmount": 730.3,
     "items": [
         {
             "id": "d49dd4d9-fcce-4b9e-af9b-67ce13ed71a6",
-            "header_id": "c4f8d583-2e62-4ee6-92 96-c4341de0067a",
+            "header_id": "c4f8d583-2e62-4ee6-9296-c4341de0067a",
             "product_id": "ba1b6ad9-8c55-44f6-b690-5eda6e6e33fe",
-            "quantity": 1,
+            "quantity": 10,
             "price": 550.10            
         },
         {
             "id": "0a0ab220-8629-40f4-9fa3-863bef1bd7e5",
             "header_id": "c4f8d583-2e62-4ee6-9296-c4341de0067a",
-            "product_id": "baac508f-093d-49a5-9633-3f987365b6fe",
-            "quantity": 1,
+            "product_id": "14262947-7246-4446-8446-89f377235051",
+            "quantity": 10,
             "price": 180.20            
         }
     ]
